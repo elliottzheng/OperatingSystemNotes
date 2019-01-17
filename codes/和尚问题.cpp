@@ -21,9 +21,10 @@ void oldMonk(){//老和尚喝水
         semWait(water);
         semWait(bucket);
         semWait(s_gang);
-        drinkWater();
+        takeWater();
         semSignal(s_gang);
         semSignal(empty);
         semSignal(bucket);
+        drinkWater();
     }
 }
